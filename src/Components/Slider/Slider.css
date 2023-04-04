@@ -1,0 +1,139 @@
+.slider {
+    width: 50%;
+}
+
+.slider-view {
+    position: relative;
+}
+
+.slider-view img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    aspect-ratio: 2/1.6;
+    cursor: pointer;
+}
+
+.slider-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.slider-icon:hover {
+    color: var(--orange);
+}
+
+.slider-icon.prev {
+    top: 50%;
+    left: 20px;
+    transform: translate(0%, -50%);
+}
+
+.slider-icon.next {
+    top: 50%;
+    right: 20px;
+    transform: translate(0%, -50%);
+}
+
+.prev-icon path,
+.next-icon path {
+    transition: stroke 0.2s ease-out;
+}
+
+.slider-icon.prev:hover .prev-icon path,
+.slider-icon.next:hover .next-icon path {
+    stroke: var(--orange);
+}
+
+.slider-view,
+.slider-thumbnails {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.slider-thumbnails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.thumbnail {
+    max-width: 90px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.thumbnail.active {
+    outline: 3px solid var(--orange);
+    opacity: 0.5;
+}
+
+.thumbnail:hover {
+    opacity: 0.5;
+}
+
+/* Règles petites résolutions jusqu'à 767px de largeur */
+@media screen and (max-width: 767px) {
+    .slider,
+    .slider-view {
+        width: 100%;
+    }
+
+    .slider-thumbnails {
+        display: none;
+    }
+
+    .slider-view img {
+        pointer-events: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .slider-view,
+    .slider-thumbnails {
+        max-width: 445px;
+        margin: 0 auto;
+    }
+    
+    .slider {
+        margin-block: 90px;
+    }
+
+    .slider-view img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .slider-icon.prev {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    .slider-icon.next {
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+        display: none;
+    }
+
+    .thumbnail {
+        margin-top: 30px;
+    }
+}
