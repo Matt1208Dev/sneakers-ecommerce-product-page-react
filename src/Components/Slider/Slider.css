@@ -1,7 +1,9 @@
+/* Conteneur principal du slider */
 .slider {
     width: 50%;
 }
 
+/* Vue principale du slider */
 .slider-view {
     position: relative;
 }
@@ -15,6 +17,15 @@
     cursor: pointer;
 }
 
+/* Règles communes aux conteneurs enfants de .slider */
+.slider-view,
+.slider-thumbnails {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Chevrons de défilement des slides */
 .slider-icon {
     width: 54px;
     height: 54px;
@@ -29,10 +40,7 @@
     cursor: pointer;
 }
 
-.slider-icon:hover {
-    color: var(--orange);
-}
-
+/* Positionnement des chevrons */
 .slider-icon.prev {
     top: 50%;
     left: 20px;
@@ -45,6 +53,7 @@
     transform: translate(0%, -50%);
 }
 
+/* Animation du chevron au survol */
 .prev-icon path,
 .next-icon path {
     transition: stroke 0.2s ease-out;
@@ -55,19 +64,14 @@
     stroke: var(--orange);
 }
 
-.slider-view,
-.slider-thumbnails {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
+/* Conteneur des vignettes */
 .slider-thumbnails {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
+/* Style des vignettes */
 .thumbnail {
     max-width: 90px;
     height: auto;
@@ -75,6 +79,7 @@
     cursor: pointer;
 }
 
+/* Animations des vignettes */
 .thumbnail.active {
     outline: 3px solid var(--orange);
     opacity: 0.5;
@@ -84,7 +89,7 @@
     opacity: 0.5;
 }
 
-/* Règles petites résolutions jusqu'à 767px de largeur */
+/* Règles résolutions <= 767px de largeur */
 @media screen and (max-width: 767px) {
     .slider,
     .slider-view {
@@ -100,13 +105,14 @@
     }
 }
 
+/* Règles résolutions >= 768px de largeur */
 @media screen and (min-width: 768px) {
     .slider-view,
     .slider-thumbnails {
         max-width: 445px;
         margin: 0 auto;
     }
-    
+
     .slider {
         margin-block: 90px;
     }

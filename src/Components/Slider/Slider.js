@@ -31,6 +31,7 @@ export default function Slider(props) {
         });
     };
 
+    // Défilement des slides vers la gauche
     const prevSlide = (e) => {
         // On compare la vue actuelle au tableau des données pour identifier son index
         productData.forEach((pic, index) => {
@@ -45,6 +46,7 @@ export default function Slider(props) {
         });
     };
 
+    // Défilement des slides vers la droite
     const nextSlide = (e) => {
         productData.forEach((pic, index) => {
             if (pic.path === currentView.path) {
@@ -78,7 +80,7 @@ export default function Slider(props) {
                     </svg>
                 </div>
                 <img
-                    onClick={props.toggleLightbox}
+                    onClick={props.toggleLightbox} // Ouverture de la lightbox
                     src={currentView.path}
                     alt=""
                 />
@@ -100,6 +102,7 @@ export default function Slider(props) {
                 </div>
             </div>
             <div className="slider-thumbnails">
+                {/* Vignettes */}
                 {productData.map((picture, index) => {
                     return (
                         <img
