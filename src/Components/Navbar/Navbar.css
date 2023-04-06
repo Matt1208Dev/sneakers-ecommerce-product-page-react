@@ -11,10 +11,10 @@
     display: flex;
     align-items: stretch;
     min-width: 320px;
-    max-width: 1000px;
+    max-width: 1100px;
     height: clamp(4rem, 10vw, 7rem);
     margin: 0 auto;
-    border-bottom: 1px solid var(--grayish-blue);
+    border-bottom: 1px solid var(--light-grayish-blue);
     background-color: #fff;
 }
 
@@ -178,7 +178,7 @@
     }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1100px) {
     .navbar {
         padding-inline: 20px;
     }

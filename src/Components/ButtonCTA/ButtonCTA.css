@@ -1,0 +1,21 @@
+.btn-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.4rem;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 8px;
+    flex-grow: 2;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+
+}
+
+.btn-cta:hover {
+    background-color: #ffab69;
+}
