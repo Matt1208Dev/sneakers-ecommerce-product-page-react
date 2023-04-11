@@ -24,7 +24,7 @@ export default function ProductPage() {
             {lightboxActive && <Lightbox toggleLightbox={toggleLightbox} />}
 
             <div className="product-infos">
-                <BrandSubtitle>SNEAKER COMPANY</BrandSubtitle>
+                <BrandSubtitle>Sneaker company</BrandSubtitle>
                 <h1>Fall Limited Edition Sneakers</h1>
                 <p className="product-desc">
                     These low-profile sneakers are your perfect casual wear

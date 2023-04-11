@@ -5,12 +5,16 @@ import iconCart from "../../Assets/images/icon-cart.svg";
 import imgAvatar from "../../Assets/images/image-avatar.png";
 import iconMenu from "../../Assets/images/icon-menu.svg";
 import closeMenu from "../../Assets/images/icon-close.svg";
+import Cart from "../Cart/Cart";
 
-export default function Navbar() {
+export default function Navbar(props) {
+    const { displayCartList, toggleCart } = props;
+    console.log(displayCartList);
     const [toggleMenu, setToggleMenu] = useState(false);
 
     const openCloseMenu = () => {
         setToggleMenu(!toggleMenu);
+        console.log(toggleMenu);
     };
 
     return (
@@ -52,11 +56,15 @@ export default function Navbar() {
                     </a>
                 </div>
                 <div className="nav-icons">
-                    <img
-                        className="cart-logo"
-                        src={iconCart}
-                        alt="Panier d'achat"
-                    />
+                    <div className="cart-box">
+                        <img
+                            onClick={displayCartList}
+                            className="cart-logo"
+                            src={iconCart}
+                            alt="Panier d'achat"
+                        />
+                        {toggleCart && <Cart />}
+                    </div>
                     <img
                         className="avatar"
                         src={imgAvatar}
