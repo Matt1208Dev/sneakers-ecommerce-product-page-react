@@ -61,8 +61,10 @@ export default function Slider(props) {
 
     return (
         <div className="slider">
+            {/* Vue principale */}
             <div className="slider-view">
                 {props.children}
+                {/* Icône "previous" */}
                 <div onClick={prevSlide} className="slider-icon prev">
                     <svg
                         className="prev-icon"
@@ -80,10 +82,12 @@ export default function Slider(props) {
                     </svg>
                 </div>
                 <img
-                    onClick={props.toggleLightbox} // Ouverture de la lightbox
+                    // Ouverture de la lightbox au clic
+                    onClick={props.toggleLightbox}
                     src={currentView.path}
                     alt=""
                 />
+                {/* Icône "next" */}
                 <div onClick={nextSlide} className="slider-icon next">
                     <svg
                         className="next-icon"
@@ -101,23 +105,30 @@ export default function Slider(props) {
                     </svg>
                 </div>
             </div>
+            {/* Bandeau inférieur de vignettes */}
             <div className="slider-thumbnails">
                 {/* Vignettes */}
                 {productData.map((picture, index) => {
                     return (
-                        <img
-                            className={
-                                currentView.id === productData[index].id
-                                    ? "thumbnail active"
-                                    : "thumbnail"
-                            }
-                            onClick={selectPicture}
-                            ref={addToRef}
-                            key={productData[index].id}
-                            src={productData[index].thumbnail}
-                            title={productData[index].title}
-                            alt={productData[index].desc}
-                        />
+                        <div className={
+                            currentView.id === productData[index].id
+                                ? "thumbnail-box active"
+                                : "thumbnail-box"
+                        }>
+                            <img
+                                className={
+                                    currentView.id === productData[index].id
+                                        ? "thumbnail active"
+                                        : "thumbnail"
+                                }
+                                onClick={selectPicture}
+                                ref={addToRef}
+                                key={productData[index].id}
+                                src={productData[index].thumbnail}
+                                title={productData[index].title}
+                                alt={productData[index].desc}
+                            />
+                        </div>
                     );
                 })}
             </div>

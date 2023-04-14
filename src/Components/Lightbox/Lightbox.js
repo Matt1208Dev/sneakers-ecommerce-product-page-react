@@ -7,6 +7,7 @@ export default function Lightbox(props) {
         <div className="lightbox">
             <div className="lightbox-slider">
                 <Slider>
+                    {/* Icône close (X) */}
                     <svg onClick={props.toggleLightbox}
                         className="btn-close"
                         width="17"

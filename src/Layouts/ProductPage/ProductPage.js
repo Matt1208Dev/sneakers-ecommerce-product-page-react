@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import productInfosTxt from "../../Data/productInfos";
 import BadgeDiscount from "../../Components/BadgeDiscount/BadgeDiscount";
 import BrandSubtitle from "../../Components/BrandSubtitle/BrandSubtitle";
-// import ButtonQuantity from "../../Components/ButtonQuantity/ButtonQuantity";
 import CurrentPrice from "../../Components/CurrentPrice/CurrentPrice";
 import Lightbox from "../../Components/Lightbox/Lightbox";
 import OldPrice from "../../Components/OldPrice/OldPrice";
@@ -12,12 +11,17 @@ import "./ProductPage.css";
 import ButtonCTA from "../../Components/ButtonCTA/ButtonCTA";
 
 export default function ProductPage() {
+    // Gestion d'état de la lightbox
     const [lightboxActive, setLightboxActive] = useState(false);
+    // Informations du produit
     const [productInfos, setProductInfos] = useState(productInfosTxt);
+
+    // Fonction Open/close de la lightbox
     const toggleLightbox = () => {
         setLightboxActive(!lightboxActive);
     };
 
+    // Gestion de la quantité avant mise au panier
     const [quantity, setQuantity] = useState(0);
 
     const updateQuantity = (qty) => {
@@ -45,12 +49,14 @@ export default function ProductPage() {
 
     return (
         <div className="product-container">
+            {/* Slider */}
             <Slider toggleLightbox={toggleLightbox} />
             {lightboxActive && <Lightbox toggleLightbox={toggleLightbox} />}
 
+            {/* Informations produit */}
             <div className="product-infos">
                 <BrandSubtitle>{productInfos.brand}</BrandSubtitle>
-                <h1>Fall Limited Edition Sneakers</h1>
+                <h1>{productInfos.title}</h1>
                 <p className="product-desc">{productInfos.desc}</p>
                 <div className="pricing-box">
                     <div className="current-price-grp">
@@ -66,7 +72,7 @@ export default function ProductPage() {
                 </div>
 
                 <div className="buttons-box">
-                    {/* <ButtonQuantity updateQuantity={updateQuantity} /> */}
+                    {/* Quantité */}
                     <div className="btn-qty">
                         <div onClick={removeQuantity} className="minus">
                             <svg
@@ -106,7 +112,10 @@ export default function ProductPage() {
                             </svg>
                         </div>
                     </div>
-                    <div className="btn-cta-box"
+                    {/* Bouton d'ajout au panier */}
+                    <div
+                        className="btn-cta-box"
+                        // Envoi des informations vers Redux
                         onClick={() =>
                             dispatch({
                                 type: "cart/addItem",

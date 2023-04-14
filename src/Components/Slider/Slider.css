@@ -72,16 +72,25 @@
 }
 
 /* Style des vignettes */
-.thumbnail {
+.thumbnail-box {
+    position: relative;
     max-width: 90px;
-    height: auto;
+    height: 90px;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.thumbnail-box.active {
+    outline: 3px solid var(--orange);
+}
+.thumbnail {
+    width: 100%;
+    height: 100%;
     cursor: pointer;
 }
 
 /* Animations des vignettes */
 .thumbnail.active {
-    outline: 3px solid var(--orange);
     opacity: 0.5;
 }
 
@@ -139,7 +148,7 @@
         display: none;
     }
 
-    .thumbnail {
+    .thumbnail-box {
         margin-top: 30px;
     }
 }

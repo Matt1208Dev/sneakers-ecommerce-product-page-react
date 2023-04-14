@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import ProductPage from "./Layouts/ProductPage/ProductPage";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
     const [toggleCart, setToggleCart] = useState(false);
@@ -12,6 +13,7 @@ function App() {
         setToggleCart(!toggleCart);
     };
 
+    // Todo: fermeture du panier lors d'un clic extérieur
     // useEffect(() => {
     //     document.addEventListener("mouseup", hideCartList);
 
@@ -58,6 +60,7 @@ function App() {
                     toggleCart={toggleCart}
                 />
                 <ProductPage />
+                <Footer />
             </div>
         </Provider>
     );

@@ -1,3 +1,4 @@
+/* Conteneur global panier */
 .cart {
     position: absolute;
     top: 100%;
@@ -8,9 +9,10 @@
     /* border: 1px solid #000; */
     border-radius: 8px;
     background-color: #fff;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* En-tête panier */
 .cart-header {
     display: flex;
     align-items: center;
@@ -19,12 +21,14 @@
     font-weight: 700;
 }
 
+/* Conteneur lignes poduit */
 .cart-list {
     padding: 1.5rem;
     width: 100%;
     text-align: center;
 }
 
+/* Lignes produit */
 .cart-item {
     width: 100%;
     display: flex;
@@ -59,6 +63,7 @@
     cursor: pointer;
 }
 
+/* Bouton "checkout" */
 .cart button {
     height: 3.5rem;
     width: 100%;
@@ -72,6 +77,7 @@
     cursor: pointer;
 }
 
+/* Panier vide */
 .cart-empty {
     min-height: 10rem;
     font-weight: 700;
@@ -81,6 +87,7 @@
     align-items: center;
 }
 
+/* Media Queries */
 @media screen and (max-width: 767px) {
     .cart {
         width: 95%;

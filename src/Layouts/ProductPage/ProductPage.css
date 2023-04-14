@@ -1,3 +1,4 @@
+/* Conteneur principal */
 .product-container {
     width: 100%;
     display: flex;
@@ -5,12 +6,14 @@
     flex-wrap: wrap;
 }
 
+/* Titre produit */
 h1 {
     font-size: clamp(30px, 5vw, 44px);
     line-height: 1.1;
     margin-bottom: 2rem;
 }
 
+/* Conteneur infios produits */
 .product-infos {
     padding: 3vw;
     display: flex;
@@ -18,16 +21,19 @@ h1 {
     justify-content: center;
 }
 
+/* Descriptif */
 .product-desc {
     color: var(--dark-grayish-blue);
     line-height: 1.6;
     margin-bottom: 2rem;
 }
 
+/* Encadré prix */
 .current-price-grp {
     display: flex;
 }
 
+/* Encadré boutons */
 .buttons-box {
     width: 100%;
     display: flex;
@@ -36,12 +42,12 @@ h1 {
     margin-bottom: 1rem;
 }
 
+/* Boutons quantité */
 .btn-qty {
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 1rem 0.8rem; */
     border-radius: 8px;
     background-color: var(--light-grayish-blue);
     flex-grow: 1;
@@ -61,6 +67,7 @@ h1 {
     fill: var(--orange);
 }
 
+/* Bouton ajout panier */
 .btn-cta-box {
     display: flex;
     flex-grow: 2;
@@ -74,6 +81,7 @@ h1 {
     margin-left: 1rem;
 }
 
+/* Media Queries */
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .product-infos {
         max-width: 100%;
