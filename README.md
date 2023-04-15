@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# SNEAKERS E-commerce product page solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Voici ma proposition au challenge [E-commerce product page de Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)
 
-## Available Scripts
+## Sommaire
 
-In the project directory, you can run:
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshots)
+    -   [Link](#link)
+-   [My process](#my-process)
 
-### `npm start`
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    -   [Useful resources](#useful-resources)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-   [Author](#author)
+-   [Acknowledgments](#acknowledgments)
 
-### `npm test`
+## Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### The challenge
 
-### `npm run build`
+L'utilisateur doit pouvoir :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Consulter la page de manière optimale, quelque soit le device utilisé
+-   Observer des animations au survol de tous les éléments intéractifs de la page
+-   Ouvrir une galerie d'image (lightbox) en cliquant sur la grande image produit
+-   Changer la grande image en cliquant sur l'une des vignettes
+-   Ajouter des produits au panier
+-   Visualiser le panier dans la page et pouvoir retirer des produits de celui-ci
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Aperçu de la page
+![Screenchot page produit](./src/Assets/images/Screenshot-app-1-min.png)
 
-### `npm run eject`
+Aperçu de la lightbox
+![Screenchot lightbox](./src/Assets/images/Screenshot-app-6-min.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Link
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Le site](https://Matt1208Dev.github.io/sneakers-product-page-react)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## My process
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Built with
 
-## Learn More
+-   CSS Vanilla
+-   Flexbox
+-   Responsive Layout
+-   Librairies JS
+    -   [React](https://reactjs.org/)
+    -   [Redux-Toolkit](https://redux-toolkit.js.org/)
+    -   [React Redux](https://react-redux.js.org/)
+    -   [UUID](https://github.com/uuidjs/uuid#readme)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### What i learned
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Coder un Slider en tant que composant React
+-   Utilisation de Flexbox
+-   Travail du comportement responsif des élements
+-   Mise en place du panier d'achats avec Redux pour la gestion des données
 
-### Code Splitting
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-   [MDN](https://developer.mozilla.org/fr/) - Ma ressource première pour HTML, CSS et JavaScript
+-   [Formation React](https://www.udemy.com/course/react-formation-complete/) par [Enzo Ustariz](https://www.youtube.com/@EcoleduWeb).
+-   [Introduction à Redux Toolkit](https://youtu.be/1lvnT2oE0_4) par [Lior Chamla](https://www.youtube.com/@LiorCHAMLA)
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-   [Matthieu Gueulle](www.linkedin.com/in/matthieu-gueulle) - LinkedIn
 
-### Making a Progressive Web App
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Merci à [Frontend Mentor](https://www.frontendmentor.io/) de mettre à la disposition de tous des projets gratuits et de qualité.

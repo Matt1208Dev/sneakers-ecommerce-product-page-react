@@ -114,7 +114,8 @@ export default function Slider(props) {
                             currentView.id === productData[index].id
                                 ? "thumbnail-box active"
                                 : "thumbnail-box"
-                        }>
+                                
+                        } key={productData[index].id}>
                             <img
                                 className={
                                     currentView.id === productData[index].id
@@ -123,7 +124,7 @@ export default function Slider(props) {
                                 }
                                 onClick={selectPicture}
                                 ref={addToRef}
-                                key={productData[index].id}
+                                
                                 src={productData[index].thumbnail}
                                 title={productData[index].title}
                                 alt={productData[index].desc}
