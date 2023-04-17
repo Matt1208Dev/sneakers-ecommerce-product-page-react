@@ -19,7 +19,7 @@ export const cartSlice = createSlice({
                     title: action.payload.title,
                     price: action.payload.price,
                     discount: action.payload.discount,
-                    quantity: 1,
+                    quantity: action.payload.quantity,
                     thumbnail: action.payload.thumbnail,
                 };
 
