@@ -11,8 +11,8 @@ export const cartSlice = createSlice({
             if (item && item !== -1) {
                 // Si oui, on incrémente sa quantité
                 item.quantity = item.quantity + action.payload.quantity;
-            } else {
-                // Sinon on l'ajoute
+            } else if (action.payload.quantity !== 0){
+                // Sinon si la quantité à ajouter est différente de 0 on ajoute l'article
                 const newItem = {
                     id: action.payload.id,
                     brand: action.payload.brand,
@@ -24,6 +24,9 @@ export const cartSlice = createSlice({
                 };
 
                 state.push(newItem);
+            } else {
+                // Sinon on ne fait rien
+                return;
             }
         },
         deleteItem: (state, action) => {
